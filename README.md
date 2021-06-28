@@ -9,14 +9,14 @@ mkdir -p catkin_ws/src && cd catkin_ws/src
 git clone https://github.com/ipa-rar/betterfactory_agv_firos.git
 
 # Download dependencies
-cd betterfactory_lidar_firos
+cd betterfactory_agv_firos
 wstool init ~/catkin_ws/src/betterfactory_agv_firos
-wstool merge ~/catkin_ws/src/betterfactory_agv_firos/betterfactory_lidar_firos.rosinstall 
+wstool merge ~/catkin_ws/src/betterfactory_agv_firos/betterfactory_agv_firos.rosinstall 
 wstool up
 cd ..
 
 # Install dependencies 
-rosdep update && rosdep install --from-paths ~/snp_demo_ws/src --ignore-src
+rosdep update && rosdep install --from-paths ~/catkin_ws/src --ignore-src
 
 
 cd ~/catkin_ws && catkin_make
