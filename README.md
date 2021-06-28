@@ -6,7 +6,7 @@
 mkdir -p catkin_ws/src && cd catkin_ws/src
 
 # Download the repository
-git clone https://github.com/ipa-rar/betterfactory_agv_firos.git
+git clone https://github.com/ipa320/betterfactory_agv_firos.git
 
 # Download dependencies
 cd betterfactory_agv_firos
