@@ -1,0 +1,2 @@
+# Main ROS packages
+- git: {local-name: firos, uri: 'https://github.com/ipa-rar/firos.git', version: 156e2715bef184ffe85b98f824056e23d0ef2bfc}
