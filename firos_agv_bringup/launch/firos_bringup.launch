@@ -1,0 +1,10 @@
+<launch>
+  <arg name="config_path" default="$(find firos_agv_bringup)/config" />
+
+  <arg name="firos_node" default="firos" />
+
+  <node name="$(arg firos_node)" pkg="firos" type="core.py" output="screen" args="--conf $(arg config_path)">
+    <param name="config_path" value="$(arg config_path)" />
+  </node>
+
+</launch>

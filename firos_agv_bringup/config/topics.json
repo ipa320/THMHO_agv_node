@@ -1,0 +1,6 @@
+{
+    "/scan": ["sensor_msgs/LaserScan", "subscriber"],
+    "/robot_pose": ["geomety_msgs/Pose", "subscriber"],
+    "/robot/goal": ["geomety_msgs/PoseStamped", "subscriber"],
+    "/footprint": ["geomety_msgs/Polygon", "subscriber"]
+}
