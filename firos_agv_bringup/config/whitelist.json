@@ -1,1 +1,5 @@
-{}
+{
+  "subscriber":[".*/scan_unified"],
+  "subscriber": [".*/gt_pose"],
+  "subscriber":[".*/footprint"]
+}
