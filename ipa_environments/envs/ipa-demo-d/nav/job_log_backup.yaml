@@ -1,0 +1,168 @@
+jobs:
+  - priority: 1
+    map_id: "map"
+    scheduled_time: 0.0 #delta time in s from start
+    deadline: 40.0 #delta time in s from start
+    agv_assignment:
+      uuid: [48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 99, 111, 98, 52, 49, 56]
+    order_uuid:
+      uuid: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    job_uuid:
+      uuid: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    actions:
+      - type: 1
+        action_uuid: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+        parameters:
+          - key: target_pose
+            value: crossing_right_in
+          - key: planner
+            value: RoadmapPlanner
+          - key: use_pd
+            value: "False"
+          - key: controller
+            value: IPAStaticTrajectoryPlanner
+          - key: action_namespace
+            value: /ipa_navigation/move_base
+      - type: 1
+        action_uuid: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+        parameters:
+          - key: target_pose
+            value: crossing_left_out
+          - key: planner
+            value: RoadmapPlanner
+          - key: use_pd
+            value: "True"
+          - key: priority
+            value: "30"
+          - key: controller
+            value: IPAStaticTrajectoryPlanner
+          - key: action_namespace
+            value: /ipa_navigation/move_base
+  - priority: 10
+    map_id: "map"
+    scheduled_time: 40.0 #delta time in s from start
+    deadline: 80.0 #delta time in s from start
+    agv_assignment:
+      uuid: [48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 99, 111, 98, 52, 49, 56]
+    order_uuid:
+      uuid: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    job_uuid:
+      uuid: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    actions:
+      - type: 1
+        action_uuid: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+        parameters:
+          - key: target_pose
+            value: crossing_left_in
+          - key: planner
+            value: RoadmapPlanner
+          - key: use_pd
+            value: "False"
+          - key: controller
+            value: IPAStaticTrajectoryPlanner
+          - key: action_namespace
+            value: /ipa_navigation/move_base
+      - type: 1
+        action_uuid: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+        parameters:
+          - key: target_pose
+            value: crossing_right_out
+          - key: planner
+            value: RoadmapPlanner
+          - key: use_pd
+            value: "True"
+          - key: priority
+            value: "30"
+          - key: controller
+            value: IPAStaticTrajectoryPlanner
+          - key: action_namespace
+            value: /ipa_navigation/move_base
+
+  - priority: 1
+    map_id: "map"
+    scheduled_time: 0.0 #delta time in s from start
+    deadline: 40.0 #delta time in s from start
+    agv_assignment:
+      uuid: [48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 114, 97, 119, 51, 51]
+    order_uuid:
+      uuid: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    job_uuid:
+      uuid: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    actions:
+      - type: 1
+        action_uuid: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+        parameters:
+          - key: target_pose
+            value: crossing_left_in
+          - key: planner
+            value: RoadmapPlanner
+          - key: use_pd
+            value: "False"
+          - key: controller
+            value: IPAStaticTrajectoryPlanner
+          - key: action_namespace
+            value: /ipa_navigation/move_base
+      - type: 1
+        action_uuid: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3]
+        parameters:
+          - key: target_pose
+            value: crossing_right_out
+          - key: planner
+            value: RoadmapPlanner
+          - key: use_pd
+            value: "True"
+          - key: priority
+            value: "30"
+          - key: controller
+            value: IPAStaticTrajectoryPlanner
+          - key: action_namespace
+            value: /ipa_navigation/move_base
+  - priority: 1
+    map_id: "map"
+    scheduled_time: 40.0 #delta time in s from start
+    deadline: 80.0 #delta time in s from start
+    agv_assignment:
+      uuid: [48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 114, 97, 119, 51, 51]
+    order_uuid:
+      uuid: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    job_uuid:
+      uuid: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    actions:
+      - type: 1
+        action_uuid: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+        parameters:
+          - key: target_pose
+            value: crossing_right_in
+          - key: planner
+            value: RoadmapPlanner
+          - key: use_pd
+            value: "False"
+          - key: controller
+            value: IPAStaticTrajectoryPlanner
+          - key: action_namespace
+            value: /ipa_navigation/move_base
+      - type: 1
+        action_uuid: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3]
+        parameters:
+          - key: target_pose
+            value: crossing_left_out
+          - key: planner
+            value: RoadmapPlanner
+          - key: use_pd
+            value: "True"
+          - key: priority
+            value: "90"
+          - key: controller
+            value: IPAStaticTrajectoryPlanner
+          - key: action_namespace
+            value: /ipa_navigation/move_base
+
+
+cycle_time: 80.0
+
+positions:
+  crossing_left_in: {x: 26.771, y: 24.186, yaw: -1.605}
+  crossing_right_in: {x: 26.641, y: 16.923, yaw: 1.544}
+  crossing_left_out: {x: 26.771, y: 24.186, yaw: 1.544}
+  crossing_right_out: {x: 26.641, y: 16.923, yaw: -1.605}
+    

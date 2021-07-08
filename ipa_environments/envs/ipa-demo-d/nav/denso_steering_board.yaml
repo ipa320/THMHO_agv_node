@@ -1,0 +1,125 @@
+jobs:
+  # RAW 4
+  - priority: 1
+    map_id: "map"
+    scheduled_time: 0.0 #delta time in s from start
+    deadline: 90000.0 #delta time in s from start
+    agv_assignment:
+      uuid: "0000000000raw4_0"
+    actions:
+      - type: 1
+        parameters:
+          - key: target_pose
+            value: start_pose_raw4
+      - type: 8
+        parameters:
+          - key: signal
+            value: "raw4_0"
+          - key: conditions
+            value: "cob4_18"
+            # receive pallet
+      - type: 1
+        parameters:
+          - key: target_pose
+            value: cable_robot_test_pose
+      - type: 1
+        parameters:
+          - key: target_pose
+            value: pallet_receive_pose
+      - type: 5
+        parameters: {}
+      - type: 1
+        parameters:
+          - key: target_pose
+            value: cable_robot_test_out_pose
+  - priority: 1
+    map_id: "map"
+    scheduled_time: 1.0 #delta time in s from start
+    deadline: 90000.0 #delta time in s from start
+    agv_assignment:
+      uuid: "0000000000raw4_0"
+    actions:
+      - type: 8
+        parameters:
+          - key: signal
+            value: "raw4_0"
+          - key: conditions
+            value: "cob4_18"
+      - type: 1
+        parameters:
+          - key: target_pose
+            value: start_pose_raw4
+
+  # COB
+  - priority: 1
+    map_id: "map"
+    scheduled_time: 0.0 #delta time in s from start
+    deadline: 90000.0 #delta time in s from start
+    agv_assignment:
+      uuid: "000000000cob4_18"
+    actions:
+      - type: 1
+        parameters:
+          - key: target_pose
+            value: start_pose_cob
+      - type: 8
+        parameters:
+          - key: signal
+            value: "cob4_18"
+          - key: conditions
+            value: "raw4_0"
+      - type: 1
+        parameters:
+          - key: target_pose
+            value: end_pose_cob
+      - type: 8
+        parameters:
+          - key: duration
+            value: "10.0"
+      - type: 1
+        parameters:
+          - key: target_pose
+            value: start_pose_cob
+  - priority: 1
+    map_id: "map"
+    scheduled_time: 1.0 #delta time in s from start
+    deadline: 90000.0 #delta time in s from start
+    agv_assignment:
+      uuid: "000000000cob4_18"
+    actions:
+      - type: 8
+        parameters:
+          - key: signal
+            value: "cob4_18"
+          - key: conditions
+            value: "raw4_0"
+      - type: 1
+        parameters:
+          - key: target_pose
+            value: end_pose_cob
+      - type: 8
+        parameters:
+          - key: duration
+            value: "3.0"
+      - type: 1
+        parameters:
+          - key: target_pose
+            value: start_pose_cob
+
+cycle_time: 9000000000.0
+
+positions:
+  pallet_receive_pose: {x: 17.207, y: 20.4300, yaw: -3.1415}
+  cable_robot_test_pose: {x: 20.247, y: 20.4300, yaw: -3.1415}
+  cable_robot_test_out_pose: {x: 20.247, y: 20.4300, yaw: 0.0}
+  cable_robot_end_pose: {x: 26.247, y: 21.1300, yaw: 0.0}
+
+  start_pose_raw4: {x: 20.0, y: 14.0, yaw: 0.1}
+  start_pose_cob: {x: 31.425, y: 13.632, yaw: 3.1415}
+  end_pose_raw4:   {x: 17.207, y: 20.430, yaw: -3.1415}
+  end_pose_cob:   {x: 27.0, y: 24.500, yaw: +1.4}
+
+  #start_pose: {x: -0.25, y: 0.015, yaw: -0.062}
+  #middle_pose: {x: 0.30, y: 0.015, yaw: -0.062}
+  #dock_pose: {x: 1.07 , y: 0.015, yaw: -0.100}
+  #dock_pose: {x: 0.89 , y: 0.015, yaw: 0.004}

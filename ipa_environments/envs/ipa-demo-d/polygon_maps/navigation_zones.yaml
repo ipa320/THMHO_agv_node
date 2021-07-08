@@ -1,0 +1,64 @@
+zones:
+- action: 0
+  area_property:
+    align_cost: 0.5
+    antialign_cost: 10.0
+    cross_cost: 1.0
+    max_velocity: 0.0
+    orientation: {w: 1.0, x: 0.0, y: 0.0, z: 0.0}
+  description: Directed zone Nr. 1
+  enter_triggers: []
+  exit_triggers: []
+  header:
+    frame_id: map
+    seq: 0
+    stamp: {nsecs: 0, secs: 0}
+  id: 1
+  polygon:
+    points:
+    - {x: -71.707, y: -72.922, z: 0.0}
+    - {x: -71.514, y: -70.080, z: 0.0}
+    - {x: -57.965, y: -70.810, z: 0.0}
+    - {x: -58.417, y: -73.852, z: 0.0}
+  side_properties: []
+  type: 3
+- action: 0
+  area_property:
+    align_cost: 1.0
+    antialign_cost: 1.0
+    cross_cost: 1.0
+    max_velocity: 0.0
+    orientation:
+      w: 0.0
+      x: 0.0
+      y: 0.0
+      z: 0.0
+  description: 'Interaction 1'
+  enter_triggers: []
+  exit_triggers:
+    - arguments: ['00000000-0000-0000-0000-0000000f465d']
+      description: InteractionZoneNotification
+      event_name: ipa_zone_model/Notify
+  header:
+    frame_id: map
+    seq: 0
+    stamp:
+      nsecs: 0
+      secs: 0
+  id: '00000000-0000-0000-0000-0000000f465d'
+  polygon:
+    points:
+    - x: 25.6
+      y: 22.5
+      z: 0.0
+    - x: 25.2
+      y: 12.8
+      z: 0.0
+    - x: 27.6
+      y: 12.8
+      z: 0.0
+    - x: 27.7
+      y: 22.5
+      z: 0.0
+  side_properties: []
+  type: 6

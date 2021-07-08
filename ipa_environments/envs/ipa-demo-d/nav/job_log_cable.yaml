@@ -1,0 +1,132 @@
+jobs:
+  - priority: 1
+    map_id: "map"
+    scheduled_time: 0.0 #delta time in s from start
+    deadline: 90000.0 #delta time in s from start
+    agv_assignment:
+      uuid: "000000000cob4_18"
+    actions:
+      - type: 1
+        parameters:
+          - key: target_pose
+            value: crossing_right_in
+          - key: use_pd
+            value: "True"
+          - key: priority
+            value: "30"
+      - type: 8
+        parameters:
+          - key: signal
+            value: "cob4-18"
+          - key: conditions
+            value: "raw3-3"
+      - type: 1
+        parameters:
+          - key: target_pose
+            value: cable_pick
+          - key: use_pd
+            value: "True"
+          - key: priority
+            value: "30"
+      - type: 2
+        parameters:
+          - key: station
+            value: station_cable_drop
+      - type: 5
+        parameters:
+          - key: foo
+            value: "0"
+      # also send the load from the cob for now
+      #- type: 4
+      #  parameters:
+      #    - key: foo
+      #      value: "0"
+      - type: 3
+        parameters:
+          - key: station
+            value: station_cable_drop
+      - type: 1
+        parameters:
+          - key: target_pose
+            value: cable_pick_exit
+          - key: use_pd
+            value: "False"
+      - type: 1
+        parameters:
+          - key: target_pose
+            value: crossing_right_out
+          - key: use_pd
+            value: "True"
+          - key: priority
+            value: "30"
+
+  - priority: 1
+    map_id: "map"
+    scheduled_time: 0.0 #delta time in s from start
+    deadline: 90000.0 #delta time in s from start
+    agv_assignment:
+      uuid: "0000000000raw3_3"
+    actions:
+      - type: 1
+        parameters:
+          - key: target_pose
+            value: crossing_left_in
+          - key: use_pd
+            value: "True"
+          - key: priority
+            value: "90"
+      - type: 8
+        parameters:
+          - key: signal
+            value: "raw3-3"
+          - key: conditions
+            value: "cob4-18"
+      - type: 1
+        parameters:
+          - key: target_pose
+            value: cable_drop
+          - key: use_pd
+            value: "True"
+          - key: priority
+            value: "90"
+      - type: 2
+        parameters:
+          - key: station
+            value: station_cable_pick
+      - type: 4
+        parameters:
+          - key: foo
+            value: "0"
+      - type: 3
+        parameters:
+          - key: station
+            value: station_cable_pick
+      - type: 1
+        parameters:
+          - key: target_pose
+            value: cable_drop_exit
+          - key: use_pd
+            value: "False"
+      - type: 1
+        parameters:
+          - key: target_pose
+            value: charging_pose
+          - key: use_pd
+            value: "True"
+          - key: priority
+            value: "90"
+
+
+cycle_time: 900000.0
+
+positions:
+  crossing_left_in: {x: 26.771, y: 24.186, yaw: -1.605}
+  crossing_right_in: {x: 26.641, y: 16.923, yaw: 1.544}
+  crossing_left_out: {x: 26.771, y: 24.186, yaw: 1.544}
+  crossing_right_out: {x: 26.641, y: 16.923, yaw: -1.605}
+  charging_pose: {x: 28.25, y: 20.3, yaw: 0.0}
+  start_pose_cob: {x: 28.25, y: 20.3, yaw: 3.14}
+  cable_pick: {x: 18.6, y: 24.0, yaw: 3.14}
+  cable_drop: {x: 18.46, y: 19.78, yaw: 3.14}
+  cable_pick_exit: {x: 19.6, y: 24.0, yaw: 0.0}
+  cable_drop_exit: {x: 19.46, y: 19.78, yaw: 0.0}

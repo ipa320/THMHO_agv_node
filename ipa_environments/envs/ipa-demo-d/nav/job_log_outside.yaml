@@ -1,0 +1,112 @@
+jobs:
+  - priority: 1
+    map_id: "map"
+    scheduled_time: 0.0 #delta time in s from start
+    deadline: 40.0 #delta time in s from start
+    agv_assignment:
+      uuid: "000000000cob4_18"
+    actions:
+      - type: 8
+        parameters:
+          - key: signal
+            value: "cob4-18"
+          - key: conditions
+            value: "raw3-3"
+      - type: 1
+        parameters:
+          - key: target_pose
+            value: stairs
+          - key: use_pd
+            value: "False"
+
+  - priority: 1
+    map_id: "map"
+    scheduled_time: 10.0 #delta time in s from start
+    deadline: 40.0 #delta time in s from start
+    agv_assignment:
+      uuid: "000000000cob4_18"
+    actions:
+      - type: 8
+        parameters:
+          - key: signal
+            value: "cob4-18"
+          - key: conditions
+            value: "raw3-3"
+      - type: 1
+        parameters:
+          - key: target_pose
+            value: stacking
+          - key: use_pd
+            value: "False"
+      - type: 1
+        parameters:
+          - key: target_pose
+            value: crossing_right_in
+          - key: use_pd
+            value: "False"
+
+  - priority: 1
+    map_id: "map"
+    scheduled_time: 0.0 #delta time in s from start
+    deadline: 40.0 #delta time in s from start
+    agv_assignment:
+      uuid: "0000000000raw3_3"
+    actions:
+      - type: 8
+        parameters:
+          - key: signal
+            value: "raw3-3"
+          - key: conditions
+            value: "cob4-18"
+      - type: 8
+        parameters:
+          - key: duration
+            value: "10.0"
+      - type: 1
+        parameters:
+          - key: target_pose
+            value: stacking
+          - key: use_pd
+            value: "False"
+
+  - priority: 1
+    map_id: "map"
+    scheduled_time: 10.0 #delta time in s from start
+    deadline: 40.0 #delta time in s from start
+    agv_assignment:
+      uuid: "0000000000raw3_3"
+    actions:
+      - type: 8
+        parameters:
+          - key: signal
+            value: "raw3-3"
+          - key: conditions
+            value: "cob4-18"
+      - type: 1
+        parameters:
+          - key: target_pose
+            value: griff_in_die_kiste
+          - key: use_pd
+            value: "False"
+      - type: 1
+        parameters:
+          - key: target_pose
+            value: crossing_left_in
+          - key: use_pd
+            value: "False"
+
+cycle_time: 80.0
+
+positions:
+  crossing_left_in: {x: 26.771, y: 24.186, yaw: -1.605}
+  crossing_right_in: {x: 26.641, y: 16.923, yaw: 1.544}
+  crossing_left_out: {x: 26.771, y: 24.186, yaw: 1.544}
+  crossing_right_out: {x: 26.641, y: 16.923, yaw: -1.605}
+  charging_pose: {x: 29.85, y: 19.55, yaw: 0.0}
+  cable_pick: {x: 18.6, y: 24.0, yaw: 3.14}
+  cable_drop: {x: 16.7, y: 18.1, yaw: 3.14}
+  stairs: {x: 12.56,y: 12.88,yaw: 1.549}
+  stacking: {x: 33.39, y: 14.88, yaw: 1.531}
+  door: {x: 16.526, y: 28.931, yaw: -0.041}
+  griff_in_die_kiste: {x: 39.685, y: 27.003, yaw: -1.611}
+

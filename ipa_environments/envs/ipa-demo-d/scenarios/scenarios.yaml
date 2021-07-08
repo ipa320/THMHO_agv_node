@@ -1,0 +1,28 @@
+map_transform: [1,1,0] #x,y,theta
+
+robots: ["cob4_18", "raw3_3"] #["cob4_18", "cob4_10", "vr_0", "vr_1"]
+
+order_aliases:
+  drive:
+    - "drive1"
+    - "drive2"
+    - "drive3"
+
+scenarios:
+  drive1:
+     type: "swap1"
+     robot_mapping:
+        r0: "raw3_3"
+        r1: "cob4_18"
+  drive2:
+     type: "swap2"
+     robot_mapping:
+        r0: "raw3_3"
+        r1: "cob4_18"
+  drive3:
+     type: "swap3"
+     robot_mapping:
+        r0: "raw3_3"
+        r1: "cob4_18"
+
+          

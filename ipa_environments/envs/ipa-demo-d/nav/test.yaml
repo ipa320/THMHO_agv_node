@@ -1,0 +1,16 @@
+jobs:
+  - priority: 1
+    map_id: "map"
+    scheduled_time: 0.0 #delta time in s from start
+    deadline: 90000.0 #delta time in s from start
+    agv_assignment:
+      uuid: "0000000000raw4_0"
+    actions:
+      - type: 4
+        parameters: {}
+
+cycle_time: 9.0
+
+positions:
+  start_pose: {x: -0.389, y: 0.055, yaw: 0.0}
+  dock_pose: {x: 0.740 , y: 0.017, yaw: 0.0}
