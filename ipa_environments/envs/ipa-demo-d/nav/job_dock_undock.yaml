@@ -1,0 +1,46 @@
+jobs:
+  - priority: 1
+    map_id: "map"
+    scheduled_time: 0.0 #delta time in s from start
+    deadline: 40.0 #delta time in s from start
+    agv_assignment:
+      uuid: "000000000cob4_18"
+    actions:
+      - type: 1
+        parameters:
+          - key: target_pose
+            value: "charging_pose"
+          - key: use_pd
+            value: "False"
+      - type: 2
+        parameters:
+          - key: station
+            value: station_charger
+      - type: 8
+        parameters:
+          - key: duration
+            value: "5"
+      - type: 3
+        parameters:
+          - key: station
+            value: station_charger
+      - type: 1
+        parameters:
+          - key: target_pose
+            value: "crossing_left_in"
+          - key: use_pd
+            value: "False"
+      
+
+
+
+cycle_time: 80.0
+
+positions:
+  crossing_left_in: {x: 26.771, y: 24.186, yaw: -1.605}
+  crossing_right_in: {x: 26.641, y: 16.923, yaw: 1.544}
+  crossing_left_out: {x: 26.771, y: 24.186, yaw: 1.544}
+  crossing_right_out: {x: 26.641, y: 16.923, yaw: -1.605}
+  charging_pose: {x: 29.85, y: 20.75, yaw: 0.0}
+  cable_pick: {x: 18.6, y: 24.0, yaw: 3.14}
+  cable_drop: {x: 16.7, y: 18.1, yaw: 3.14}
