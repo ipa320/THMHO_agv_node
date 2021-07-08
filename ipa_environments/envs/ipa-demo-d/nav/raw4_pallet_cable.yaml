@@ -1,0 +1,37 @@
+jobs:
+  - priority: 1
+    map_id: "map"
+    scheduled_time: 0.0 #delta time in s from start
+    deadline: 90000.0 #delta time in s from start
+    agv_assignment:
+      uuid: "0000000000raw4_0"
+    actions:
+      - type: 1
+        parameters:
+          - key: target_pose
+            value: cable_robot_test_pose
+      - type: 1
+        parameters:
+          - key: target_pose
+            value: pallet_receive_pose
+      - type: 5
+        parameters: {}
+      - type: 1
+        parameters:
+          - key: target_pose
+            value: cable_robot_test_pose
+      - type: 1
+        parameters:
+          - key: target_pose
+            value: cable_robot_end_pose
+
+cycle_time: 9000000000.0
+
+positions:
+  pallet_receive_pose: {x: 17.207, y: 20.4300, yaw: -3.1415}
+  cable_robot_test_pose: {x: 20.247, y: 20.4300, yaw: -3.1415}
+  cable_robot_end_pose: {x: 26.247, y: 21.1300, yaw: 0.0}
+  #start_pose: {x: -0.25, y: 0.015, yaw: -0.062}
+  #middle_pose: {x: 0.30, y: 0.015, yaw: -0.062}
+  #dock_pose: {x: 1.07 , y: 0.015, yaw: -0.100}
+  #dock_pose: {x: 0.89 , y: 0.015, yaw: 0.004}
