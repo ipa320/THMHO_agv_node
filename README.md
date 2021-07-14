@@ -6,12 +6,12 @@
 mkdir -p catkin_ws/src && cd catkin_ws/src
 
 # Download the repository
-git clone https://github.com/ipa320/betterfactory_agv_firos.git
+git clone https://github.com/ipa320/THMHO_agv_node.git
 
 # Download dependencies
-cd betterfactory_agv_firos
-wstool init ~/catkin_ws/src/betterfactory_agv_firos
-wstool merge ~/catkin_ws/src/betterfactory_agv_firos/betterfactory_agv_firos.rosinstall 
+cd THMHO_agv_node
+wstool init ~/catkin_ws/src/THMHO_agv_node
+wstool merge ~/catkin_ws/src/THMHO_agv_node/THMHO_agv_node.rosinstall 
 wstool up
 cd ..
 
